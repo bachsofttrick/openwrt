@@ -62,6 +62,14 @@ DEFAULT_PACKAGES.router:=\
 	ppp \
 	ppp-mod-pppoe
 
+DEFAULT_PACKAGES.tweak:=\
+	luci \
+  atop \
+  htop \
+  bmon \
+  nano \
+  usbutils \
+
 ifneq ($(DUMP),)
   all: dumpinfo
 endif
@@ -92,6 +100,9 @@ else
     -include ./$(SUBTARGET)/target.mk
   endif
 endif
+
+# Add tweaked packages
+DEFAULT_PACKAGES += $(DEFAULT_PACKAGES.tweak)
 
 # Add device specific packages (here below to allow device type set from subtarget)
 DEFAULT_PACKAGES += $(DEFAULT_PACKAGES.$(DEVICE_TYPE))

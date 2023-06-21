@@ -75,6 +75,9 @@ define Device/xunlong_orangepi-r1-plus-lts
   DEVICE_MODEL := Orange Pi R1 Plus LTS
   SOC := rk3328
   IMAGE/sysupgrade.img.gz := boot-common | boot-script | pine64-img | gzip | append-metadata
-  DEVICE_PACKAGES := kmod-usb-net-rtl8152
+  DEVICE_PACKAGES := kmod-usb-net-rtl8152 \
+  kmod-usb-net-rndis kmod-usb-storage kmod-usb-storage-extras kmod-fs-exfat kmod-fs-ntfs3 \
+  kmod-fs-vfat \
+
 endef
 TARGET_DEVICES += xunlong_orangepi-r1-plus-lts
