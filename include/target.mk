@@ -64,8 +64,10 @@ DEFAULT_PACKAGES.router:=\
 
 DEFAULT_PACKAGES.tweak:=\
 	luci \
+  luci-app-adblock \
   atop \
   htop \
+  iperf3 \
   bmon \
   nano \
   usbutils \
